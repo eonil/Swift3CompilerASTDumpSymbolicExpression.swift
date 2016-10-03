@@ -1,0 +1,501 @@
+(source_file
+  (enum_decl "E1" type='E1.Type' access=internal @_fixed_layout)
+  (enum_decl "E2" type='E2.Type' access=internal @_fixed_layout
+    (enum_case_decl
+      (enum_element_decl "c2a" type='(E2.Type) -> E2' access=internal))
+    (enum_element_decl "c2a" type='(E2.Type) -> E2' access=internal)
+    (func_decl implicit "==(_:_:)" type='(E2.Type) -> (E2, E2) -> Bool' access=internal type
+      (conformance Swift.(file).Equatable.==)
+      (parameter_list
+        (parameter "self" type='E2.Type'))
+      (parameter_list
+        (parameter "a" type='E2')
+        (parameter "b" type='E2'))
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_typed implicit type='Int'
+            (pattern_named implicit type='Int' 'index_a')))
+
+        (switch_stmt
+          (declref_expr implicit type='E2' decl=A.(file).E2.func decl.a function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E2' E2._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E2.func decl.index_a function_ref=unapplied specialized=no)
+                (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                  (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                    (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0)))))))
+        (pattern_binding_decl
+          (pattern_typed implicit type='Int'
+            (pattern_named implicit type='Int' 'index_b')))
+
+        (switch_stmt
+          (declref_expr implicit type='E2' decl=A.(file).E2.func decl.b function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E2' E2._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E2.func decl.index_b function_ref=unapplied specialized=no)
+                (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                  (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                    (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0)))))))
+        (return_stmt
+          (binary_expr implicit type='Bool' nothrow
+            (declref_expr implicit type='(Int, Int) -> Bool' decl=Swift.(file).== function_ref=unapplied specialized=no)
+            (tuple_expr implicit type='(Int, Int)'
+              (declref_expr implicit type='Int' decl=A.(file).E2.func decl.index_a function_ref=unapplied specialized=no)
+              (declref_expr implicit type='Int' decl=A.(file).E2.func decl.index_b function_ref=unapplied specialized=no))))))
+    (func_decl implicit 'anonname=0x7fcce3102d80' type='(E2) -> () -> Int' access=internal getter_for=hashValue
+      (parameter_list
+        (parameter "self" type='E2'))
+      (parameter_list)
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_typed implicit type='Int'
+            (pattern_named implicit type='Int' 'index')))
+
+        (switch_stmt
+          (declref_expr implicit type='E2' decl=A.(file).E2.func decl.self function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E2' E2._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E2.func decl.index function_ref=unapplied specialized=no)
+                (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                  (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                    (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0)))))))
+        (return_stmt
+          (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+            (load_expr implicit type='Int'
+              (declref_expr implicit type='@lvalue Int' accessKind=read decl=A.(file).E2.func decl.index function_ref=unapplied specialized=no))))))
+    (var_decl implicit "hashValue" type='Int' access=internal storage_kind=computed
+      (func_decl implicit 'anonname=0x7fcce3102d80' type='(E2) -> () -> Int' access=internal getter_for=hashValue
+        (parameter_list
+          (parameter "self" type='E2'))
+        (parameter_list)
+        (brace_stmt
+          (pattern_binding_decl
+            (pattern_typed implicit type='Int'
+              (pattern_named implicit type='Int' 'index')))
+
+          (switch_stmt
+            (declref_expr implicit type='E2' decl=A.(file).E2.func decl.self function_ref=unapplied specialized=no)
+            (case_stmt
+              (case_label_item
+              (pattern_enum_element implicit type='E2' E2._))
+              (brace_stmt
+                (assign_expr
+                  (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E2.func decl.index function_ref=unapplied specialized=no)
+                  (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                    (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                      (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                      (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                    (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                      (integer_literal_expr implicit type='Int2048' value=0)))))))
+          (return_stmt
+            (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+              (load_expr implicit type='Int'
+                (declref_expr implicit type='@lvalue Int' accessKind=read decl=A.(file).E2.func decl.index function_ref=unapplied specialized=no)))))))
+    (pattern_binding_decl implicit
+      (pattern_typed implicit type='Int'
+        (pattern_named implicit type='Int' 'hashValue'))))
+  (enum_decl "E3" type='E3.Type' access=internal @_fixed_layout inherits: Int
+    (enum_case_decl
+      (enum_element_decl "c3a" type='(E3.Type) -> E3' access=internal))
+    (enum_element_decl "c3a" type='(E3.Type) -> E3' access=internal)
+    (typealias implicit "RawValue" type='E3.RawValue.Type' access=internal type='Int')
+    (func_decl implicit 'anonname=0x7fcce213d800' type='(E3) -> () -> Int' access=internal getter_for=hashValue
+      (parameter_list
+        (parameter "self" type='E3'))
+      (parameter_list)
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_typed implicit type='Int'
+            (pattern_named implicit type='Int' 'index')))
+
+        (switch_stmt
+          (declref_expr implicit type='E3' decl=A.(file).E3.func decl.self function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E3' E3._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E3.func decl.index function_ref=unapplied specialized=no)
+                (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                  (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                    (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0)))))))
+        (return_stmt
+          (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+            (load_expr implicit type='Int'
+              (declref_expr implicit type='@lvalue Int' accessKind=read decl=A.(file).E3.func decl.index function_ref=unapplied specialized=no))))))
+    (var_decl implicit "hashValue" type='Int' access=internal storage_kind=computed
+      (func_decl implicit 'anonname=0x7fcce213d800' type='(E3) -> () -> Int' access=internal getter_for=hashValue
+        (parameter_list
+          (parameter "self" type='E3'))
+        (parameter_list)
+        (brace_stmt
+          (pattern_binding_decl
+            (pattern_typed implicit type='Int'
+              (pattern_named implicit type='Int' 'index')))
+
+          (switch_stmt
+            (declref_expr implicit type='E3' decl=A.(file).E3.func decl.self function_ref=unapplied specialized=no)
+            (case_stmt
+              (case_label_item
+              (pattern_enum_element implicit type='E3' E3._))
+              (brace_stmt
+                (assign_expr
+                  (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E3.func decl.index function_ref=unapplied specialized=no)
+                  (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                    (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                      (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                      (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                    (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                      (integer_literal_expr implicit type='Int2048' value=0)))))))
+          (return_stmt
+            (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+              (load_expr implicit type='Int'
+                (declref_expr implicit type='@lvalue Int' accessKind=read decl=A.(file).E3.func decl.index function_ref=unapplied specialized=no)))))))
+    (pattern_binding_decl implicit
+      (pattern_typed implicit type='Int'
+        (pattern_named implicit type='Int' 'hashValue')))
+    (constructor_decl implicit "init(rawValue:)" type='(E3.Type) -> (Int) -> E3?' access=internal designated failable=Optional
+      (parameter_list
+        (parameter "self" type='inout E3' mutable))
+      (parameter_list
+        (parameter "rawValue" apiName=rawValue type='Int'))
+      (brace_stmt
+        (switch_stmt
+          (declref_expr implicit type='Int' decl=A.(file).E3.init.rawValue function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_expr implicit type='Int'
+              (call_expr implicit type='Int1' nothrow  arg_labels=
+                (dot_syntax_call_expr implicit type='() -> Int1' nothrow
+                  (declref_expr implicit type='(Bool) -> () -> Int1' decl=Swift.(file).Bool._getBuiltinLogicValue() function_ref=double specialized=no)
+                  (binary_expr implicit type='Bool' nothrow
+                    (declref_expr implicit type='(Int, Int) -> Bool' decl=Swift.(file).~= [with Int[Int: Equatable module Swift]] function_ref=compound specialized=no)
+                    (tuple_expr implicit type='(Int, Int)'
+                      (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                        (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                          (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                          (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                        (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                          (integer_literal_expr implicit type='Int2048' value=0)))
+                      (declref_expr implicit type='Int' decl=A.(file).E3.init.$match function_ref=unapplied specialized=no))))
+                (tuple_expr implicit type='()'))))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue E3' accessKind=write decl=A.(file).E3.init.self direct_to_storage function_ref=unapplied specialized=no)
+                (dot_syntax_call_expr implicit type='E3' nothrow
+                  (declref_expr implicit type='(E3.Type) -> E3' decl=A.(file).E3.c3a@A.swift:8:10 function_ref=double specialized=no)
+                  (type_expr implicit type='E3.Type' typerepr='<<NULL>>')))))
+          (case_stmt
+            (case_label_item
+            (pattern_any implicit type='Int'))
+            (brace_stmt
+              (fail_stmt))))
+        (return_stmt)))
+    (func_decl implicit 'anonname=0x7fcce213de90' type='(E3) -> () -> Int' access=internal getter_for=rawValue
+      (parameter_list
+        (parameter "self" type='E3'))
+      (parameter_list)
+      (brace_stmt
+        (switch_stmt
+          (declref_expr implicit type='E3' decl=A.(file).E3.func decl.self function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E3' E3._))
+            (brace_stmt
+              (return_stmt
+                (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                  (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                    (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0)))))))))
+    (var_decl implicit "rawValue" type='Int' access=internal storage_kind=computed
+      (func_decl implicit 'anonname=0x7fcce213de90' type='(E3) -> () -> Int' access=internal getter_for=rawValue
+        (parameter_list
+          (parameter "self" type='E3'))
+        (parameter_list)
+        (brace_stmt
+          (switch_stmt
+            (declref_expr implicit type='E3' decl=A.(file).E3.func decl.self function_ref=unapplied specialized=no)
+            (case_stmt
+              (case_label_item
+              (pattern_enum_element implicit type='E3' E3._))
+              (brace_stmt
+                (return_stmt
+                  (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                    (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                      (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                      (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                    (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                      (integer_literal_expr implicit type='Int2048' value=0))))))))))
+    (pattern_binding_decl implicit
+      (pattern_typed implicit type='Int'
+        (pattern_named implicit type='Int' 'rawValue'))))
+  (enum_decl "E4" type='E4.Type' access=internal @_fixed_layout inherits: String
+    (enum_case_decl
+      (enum_element_decl "c4a" type='(E4.Type) -> E4' access=internal))
+    (enum_element_decl "c4a" type='(E4.Type) -> E4' access=internal)
+    (typealias implicit "RawValue" type='E4.RawValue.Type' access=internal type='String')
+    (func_decl implicit 'anonname=0x7fcce2817200' type='(E4) -> () -> Int' access=internal getter_for=hashValue
+      (parameter_list
+        (parameter "self" type='E4'))
+      (parameter_list)
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_typed implicit type='Int'
+            (pattern_named implicit type='Int' 'index')))
+
+        (switch_stmt
+          (declref_expr implicit type='E4' decl=A.(file).E4.func decl.self function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E4' E4._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E4.func decl.index function_ref=unapplied specialized=no)
+                (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                  (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                    (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0)))))))
+        (return_stmt
+          (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+            (load_expr implicit type='Int'
+              (declref_expr implicit type='@lvalue Int' accessKind=read decl=A.(file).E4.func decl.index function_ref=unapplied specialized=no))))))
+    (var_decl implicit "hashValue" type='Int' access=internal storage_kind=computed
+      (func_decl implicit 'anonname=0x7fcce2817200' type='(E4) -> () -> Int' access=internal getter_for=hashValue
+        (parameter_list
+          (parameter "self" type='E4'))
+        (parameter_list)
+        (brace_stmt
+          (pattern_binding_decl
+            (pattern_typed implicit type='Int'
+              (pattern_named implicit type='Int' 'index')))
+
+          (switch_stmt
+            (declref_expr implicit type='E4' decl=A.(file).E4.func decl.self function_ref=unapplied specialized=no)
+            (case_stmt
+              (case_label_item
+              (pattern_enum_element implicit type='E4' E4._))
+              (brace_stmt
+                (assign_expr
+                  (declref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).E4.func decl.index function_ref=unapplied specialized=no)
+                  (call_expr implicit type='Int' nothrow  arg_labels=_builtinIntegerLiteral:
+                    (constructor_ref_call_expr implicit type='(Int2048) -> Int' nothrow
+                      (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+                      (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                    (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                      (integer_literal_expr implicit type='Int2048' value=0)))))))
+          (return_stmt
+            (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+              (load_expr implicit type='Int'
+                (declref_expr implicit type='@lvalue Int' accessKind=read decl=A.(file).E4.func decl.index function_ref=unapplied specialized=no)))))))
+    (pattern_binding_decl implicit
+      (pattern_typed implicit type='Int'
+        (pattern_named implicit type='Int' 'hashValue')))
+    (constructor_decl implicit "init(rawValue:)" type='(E4.Type) -> (String) -> E4?' access=internal designated failable=Optional
+      (parameter_list
+        (parameter "self" type='inout E4' mutable))
+      (parameter_list
+        (parameter "rawValue" apiName=rawValue type='String'))
+      (brace_stmt
+        (switch_stmt
+          (declref_expr implicit type='String' decl=A.(file).E4.init.rawValue function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_expr implicit type='String'
+              (call_expr implicit type='Int1' nothrow  arg_labels=
+                (dot_syntax_call_expr implicit type='() -> Int1' nothrow
+                  (declref_expr implicit type='(Bool) -> () -> Int1' decl=Swift.(file).Bool._getBuiltinLogicValue() function_ref=double specialized=no)
+                  (binary_expr implicit type='Bool' nothrow
+                    (declref_expr implicit type='(String, String) -> Bool' decl=Swift.(file).~= [with String[String: Equatable module Swift]] function_ref=compound specialized=no)
+                    (tuple_expr implicit type='(String, String)'
+                      (string_literal_expr implicit type='String' encoding=utf8 value="c4a" builtin_initializer=Swift.(file).String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)
+                      (declref_expr implicit type='String' decl=A.(file).E4.init.$match function_ref=unapplied specialized=no))))
+                (tuple_expr implicit type='()'))))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue E4' accessKind=write decl=A.(file).E4.init.self direct_to_storage function_ref=unapplied specialized=no)
+                (dot_syntax_call_expr implicit type='E4' nothrow
+                  (declref_expr implicit type='(E4.Type) -> E4' decl=A.(file).E4.c4a@A.swift:11:10 function_ref=double specialized=no)
+                  (type_expr implicit type='E4.Type' typerepr='<<NULL>>')))))
+          (case_stmt
+            (case_label_item
+            (pattern_any implicit type='String'))
+            (brace_stmt
+              (fail_stmt))))
+        (return_stmt)))
+    (func_decl implicit 'anonname=0x7fcce28178b0' type='(E4) -> () -> String' access=internal getter_for=rawValue
+      (parameter_list
+        (parameter "self" type='E4'))
+      (parameter_list)
+      (brace_stmt
+        (switch_stmt
+          (declref_expr implicit type='E4' decl=A.(file).E4.func decl.self function_ref=unapplied specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='E4' E4._))
+            (brace_stmt
+              (return_stmt
+                (string_literal_expr implicit type='String' encoding=utf8 value="c4a" builtin_initializer=Swift.(file).String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))))
+    (var_decl implicit "rawValue" type='String' access=internal storage_kind=computed
+      (func_decl implicit 'anonname=0x7fcce28178b0' type='(E4) -> () -> String' access=internal getter_for=rawValue
+        (parameter_list
+          (parameter "self" type='E4'))
+        (parameter_list)
+        (brace_stmt
+          (switch_stmt
+            (declref_expr implicit type='E4' decl=A.(file).E4.func decl.self function_ref=unapplied specialized=no)
+            (case_stmt
+              (case_label_item
+              (pattern_enum_element implicit type='E4' E4._))
+              (brace_stmt
+                (return_stmt
+                  (string_literal_expr implicit type='String' encoding=utf8 value="c4a" builtin_initializer=Swift.(file).String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))))))
+    (pattern_binding_decl implicit
+      (pattern_typed implicit type='String'
+        (pattern_named implicit type='String' 'rawValue'))))
+  (struct_decl "AAA" type='AAA.Type' access=internal @_fixed_layout
+    (pattern_binding_decl
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'bbb')
+        (type_ident
+          (component id='Int' bind=Swift.(file).Int))))
+    (var_decl "bbb" type='Int' access=internal storage_kind=stored_with_trivial_accessors
+      (func_decl implicit 'anonname=0x7fcce30340c0' type='(AAA) -> () -> Int' interface type='(AAA) -> () -> Int' access=internal getter_for=bbb
+        (parameter_list
+          (parameter "self" type='AAA'))
+        (parameter_list)
+        (brace_stmt
+          (return_stmt
+            (member_ref_expr implicit type='Int' decl=A.(file).AAA.bbb@A.swift:16:9 direct_to_storage
+              (declref_expr implicit type='AAA' decl=A.(file).AAA.func decl.self@A.swift:16:9 function_ref=unapplied specialized=no)))))
+      (func_decl implicit 'anonname=0x7fcce3034340' type='(inout AAA) -> (Int) -> ()' interface type='(inout AAA) -> (Int) -> ()' access=internal setter_for=bbb
+        (parameter_list
+          (parameter "self" type='inout AAA' mutable))
+        (parameter_list
+          (parameter "value" type='Int'))
+        (brace_stmt
+          (assign_expr
+            (member_ref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).AAA.bbb@A.swift:16:9 direct_to_storage
+              (declref_expr implicit type='@lvalue AAA' accessKind=readwrite decl=A.(file).AAA.func decl.self@A.swift:16:9 function_ref=unapplied specialized=no))
+            (declref_expr implicit type='Int' decl=A.(file).AAA.func decl.value@A.swift:16:9 function_ref=unapplied specialized=no))))
+      (func_decl implicit 'anonname=0x7fcce3034a70' type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Builtin.RawPointer?)' interface type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Optional<Builtin.RawPointer>)' access=internal materializeForSet_for=bbb
+        (parameter_list
+          (parameter "self" type='inout AAA' mutable))
+        (parameter_list
+          (parameter "buffer" type='Builtin.RawPointer')
+          (parameter "callbackStorage" type='inout Builtin.UnsafeValueBuffer' mutable))))
+    (pattern_binding_decl
+      (pattern_typed type='CCC'
+        (pattern_named type='CCC' 'ccc')
+        (type_ident
+          (component id='CCC' bind=A.(file).CCC@A.swift:19:8))))
+    (var_decl "ccc" type='CCC' access=internal storage_kind=stored_with_trivial_accessors
+      (func_decl implicit 'anonname=0x7fcce3036df0' type='(AAA) -> () -> CCC' interface type='(AAA) -> () -> CCC' access=internal getter_for=ccc
+        (parameter_list
+          (parameter "self" type='AAA'))
+        (parameter_list)
+        (brace_stmt
+          (return_stmt
+            (member_ref_expr implicit type='CCC' decl=A.(file).AAA.ccc@A.swift:17:9 direct_to_storage
+              (declref_expr implicit type='AAA' decl=A.(file).AAA.func decl.self@A.swift:17:9 function_ref=unapplied specialized=no)))))
+      (func_decl implicit 'anonname=0x7fcce3037070' type='(inout AAA) -> (CCC) -> ()' interface type='(inout AAA) -> (CCC) -> ()' access=internal setter_for=ccc
+        (parameter_list
+          (parameter "self" type='inout AAA' mutable))
+        (parameter_list
+          (parameter "value" type='CCC'))
+        (brace_stmt
+          (assign_expr
+            (member_ref_expr implicit type='@lvalue CCC' accessKind=write decl=A.(file).AAA.ccc@A.swift:17:9 direct_to_storage
+              (declref_expr implicit type='@lvalue AAA' accessKind=readwrite decl=A.(file).AAA.func decl.self@A.swift:17:9 function_ref=unapplied specialized=no))
+            (declref_expr implicit type='CCC' decl=A.(file).AAA.func decl.value@A.swift:17:9 function_ref=unapplied specialized=no))))
+      (func_decl implicit 'anonname=0x7fcce30376b0' type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Builtin.RawPointer?)' interface type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Optional<Builtin.RawPointer>)' access=internal materializeForSet_for=ccc
+        (parameter_list
+          (parameter "self" type='inout AAA' mutable))
+        (parameter_list
+          (parameter "buffer" type='Builtin.RawPointer')
+          (parameter "callbackStorage" type='inout Builtin.UnsafeValueBuffer' mutable))))
+    (func_decl implicit 'anonname=0x7fcce30340c0' type='(AAA) -> () -> Int' interface type='(AAA) -> () -> Int' access=internal getter_for=bbb
+      (parameter_list
+        (parameter "self" type='AAA'))
+      (parameter_list)
+      (brace_stmt
+        (return_stmt
+          (member_ref_expr implicit type='Int' decl=A.(file).AAA.bbb@A.swift:16:9 direct_to_storage
+            (declref_expr implicit type='AAA' decl=A.(file).AAA.func decl.self@A.swift:16:9 function_ref=unapplied specialized=no)))))
+    (func_decl implicit 'anonname=0x7fcce3034340' type='(inout AAA) -> (Int) -> ()' interface type='(inout AAA) -> (Int) -> ()' access=internal setter_for=bbb
+      (parameter_list
+        (parameter "self" type='inout AAA' mutable))
+      (parameter_list
+        (parameter "value" type='Int'))
+      (brace_stmt
+        (assign_expr
+          (member_ref_expr implicit type='@lvalue Int' accessKind=write decl=A.(file).AAA.bbb@A.swift:16:9 direct_to_storage
+            (declref_expr implicit type='@lvalue AAA' accessKind=readwrite decl=A.(file).AAA.func decl.self@A.swift:16:9 function_ref=unapplied specialized=no))
+          (declref_expr implicit type='Int' decl=A.(file).AAA.func decl.value@A.swift:16:9 function_ref=unapplied specialized=no))))
+    (func_decl implicit 'anonname=0x7fcce3034a70' type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Builtin.RawPointer?)' interface type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Optional<Builtin.RawPointer>)' access=internal materializeForSet_for=bbb
+      (parameter_list
+        (parameter "self" type='inout AAA' mutable))
+      (parameter_list
+        (parameter "buffer" type='Builtin.RawPointer')
+        (parameter "callbackStorage" type='inout Builtin.UnsafeValueBuffer' mutable)))
+    (func_decl implicit 'anonname=0x7fcce3036df0' type='(AAA) -> () -> CCC' interface type='(AAA) -> () -> CCC' access=internal getter_for=ccc
+      (parameter_list
+        (parameter "self" type='AAA'))
+      (parameter_list)
+      (brace_stmt
+        (return_stmt
+          (member_ref_expr implicit type='CCC' decl=A.(file).AAA.ccc@A.swift:17:9 direct_to_storage
+            (declref_expr implicit type='AAA' decl=A.(file).AAA.func decl.self@A.swift:17:9 function_ref=unapplied specialized=no)))))
+    (func_decl implicit 'anonname=0x7fcce3037070' type='(inout AAA) -> (CCC) -> ()' interface type='(inout AAA) -> (CCC) -> ()' access=internal setter_for=ccc
+      (parameter_list
+        (parameter "self" type='inout AAA' mutable))
+      (parameter_list
+        (parameter "value" type='CCC'))
+      (brace_stmt
+        (assign_expr
+          (member_ref_expr implicit type='@lvalue CCC' accessKind=write decl=A.(file).AAA.ccc@A.swift:17:9 direct_to_storage
+            (declref_expr implicit type='@lvalue AAA' accessKind=readwrite decl=A.(file).AAA.func decl.self@A.swift:17:9 function_ref=unapplied specialized=no))
+          (declref_expr implicit type='CCC' decl=A.(file).AAA.func decl.value@A.swift:17:9 function_ref=unapplied specialized=no))))
+    (func_decl implicit 'anonname=0x7fcce30376b0' type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Builtin.RawPointer?)' interface type='(inout AAA) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Optional<Builtin.RawPointer>)' access=internal materializeForSet_for=ccc
+      (parameter_list
+        (parameter "self" type='inout AAA' mutable))
+      (parameter_list
+        (parameter "buffer" type='Builtin.RawPointer')
+        (parameter "callbackStorage" type='inout Builtin.UnsafeValueBuffer' mutable)))
+    (constructor_decl implicit "init(bbb:ccc:)" type='(AAA.Type) -> (Int, CCC) -> AAA' access=internal designated
+      (parameter_list
+        (parameter "self" type='inout AAA' mutable))
+      (parameter_list
+        (parameter "bbb" apiName=bbb type='Int')
+        (parameter "ccc" apiName=ccc type='CCC'))))
+  (struct_decl "CCC" type='CCC.Type' access=internal @_fixed_layout
+    (constructor_decl implicit "init()" type='(CCC.Type) -> () -> CCC' access=internal designated
+      (parameter_list
+        (parameter "self" type='inout CCC' mutable))
+      (parameter_list)
+      (brace_stmt
+        (return_stmt)))))
