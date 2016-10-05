@@ -26,9 +26,40 @@ class Swift3CompilerASTDumpSymbolicExpressionTests: XCTestCase {
         }
     }
 
+    func test2() throws {
+        let a = "(enum_decl \"E1\" type='E1.Type' access=internal @_fixed_layout)"
+        let b = tokenize(code: a)
+        XCTAssert(b.count == 11)
+        let c = analyze(tokens: b)
+        XCTAssert(c.text == "")
+        XCTAssert(c.children.count == 5)
+        XCTAssert(c.children[0].text == "enum_decl")
+        XCTAssert(c.children[4].text == "@_fixed_layout")
+        let d = organize(ast: c)
+        switch d {
+        case .list(let a):
+            XCTAssert(a.count == 5)
+            switch a[0] {
+            case .list(_):
+                XCTFail()
+            case .text(let s):
+                XCTAssert(s == "enum_decl")
+            }
+            switch a[4] {
+            case .list(_):
+                XCTFail()
+            case .text(let s):
+                XCTAssert(s == "@_fixed_layout")
+            }
+        case .text(_):
+            XCTFail()
+        }
+    }
+
     static var allTests : [(String, (Swift3CompilerASTDumpSymbolicExpressionTests) -> () throws -> Void)] {
         return [
             ("test1", test1),
+            ("test2", test2),
         ]
     }
 }
