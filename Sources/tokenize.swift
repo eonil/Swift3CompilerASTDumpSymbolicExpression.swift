@@ -24,7 +24,7 @@ func tokenize(code: String) -> [Token] {
         switch quoting {
         case .none:
             quoting = .quoting(ch)
-            tokenConstruction.append("'")
+            tokenConstruction.append(ch)
         case .quoting(let ch1):
             if ch1 == ch {
                 quoting = .none
