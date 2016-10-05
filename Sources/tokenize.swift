@@ -9,7 +9,7 @@
 func tokenize(code: String) -> [Token] {
     enum QuotingState {
         case none
-        case singleQuoting
+        case quoting(Character)
     }
     var allTokens = [Token]()
     var tokenConstruction = ""
@@ -20,23 +20,24 @@ func tokenize(code: String) -> [Token] {
         allTokens.append(.text(tokenConstruction))
         tokenConstruction = ""
     }
-    func processSingleQuote() {
+    func processQuote(_ ch: Character) {
         switch quoting {
         case .none:
-            quoting = .singleQuoting
+            quoting = .quoting(ch)
             tokenConstruction.append("'")
-        case .singleQuoting:
-            quoting = .none
-            tokenConstruction.append("'")
+        case .quoting(let ch1):
+            if ch1 == ch {
+                quoting = .none
+            }
+            tokenConstruction.append(ch)
         }
     }
-
     for ch in code.characters {
         switch quoting {
         case .none:
             switch ch {
-            case "'":
-                processSingleQuote()
+            case "'", "\"":
+                processQuote(ch)
             case "(":
                 commitCurrentTokenConstructionIfAvailableAndReset()
                 allTokens.append(Token.punctuator("("))
@@ -49,15 +50,16 @@ func tokenize(code: String) -> [Token] {
             default:
                 tokenConstruction.append(ch)
             }
-        case .singleQuoting:
+        case .quoting:
             switch ch {
-            case "'":
-                processSingleQuote()
+            case "'", "\"":
+                processQuote(ch)
             default:
                 tokenConstruction.append(ch)
             }
         }
     }
+    commitCurrentTokenConstructionIfAvailableAndReset()
     return concatWhitespaceTokens(tokens: allTokens)
 }
 

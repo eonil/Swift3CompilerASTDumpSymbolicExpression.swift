@@ -56,10 +56,17 @@ class Swift3CompilerASTDumpSymbolicExpressionTests: XCTestCase {
         }
     }
 
+    func test3() throws {
+        let a = "\"==(_:_:)\""
+        let b = tokenize(code: a)
+        XCTAssert(b.count == 1)
+    }
+
     static var allTests : [(String, (Swift3CompilerASTDumpSymbolicExpressionTests) -> () throws -> Void)] {
         return [
             ("test1", test1),
             ("test2", test2),
+            ("test3", test3),
         ]
     }
 }
